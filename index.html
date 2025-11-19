@@ -105,22 +105,32 @@
             font-size: 0.8rem;
             border-top: 1px solid #333;
         }
-        
-        /* --- 左上のロゴ設定 --- */
+        /* --- 左上のロゴ設定（更新版） --- */
         .site-logo {
-            position: absolute; /* 場所を固定する設定 */
-            top: 40px;          /* 上からの距離 */
-            left: 30px;         /* 左からの距離 */
-            color: #c5a059;     /* 文字色（白に近いグレー） */
-            font-size: 1.5rem;  /* 文字の大きさ */
-            font-weight: 600;   /* 文字の太さ */
-            z-index: 100;       /* 背景より手前に表示 */
-            letter-spacing: 0.15em; /* 文字の間隔を少し広げる */
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            z-index: 100;
+            letter-spacing: 0.15em;
+            text-decoration: none; /* 下線を消す */
+            transition: opacity 0.3s; /* ホバー時のアニメーション */
+        }
+
+        .site-logo:hover {
+            opacity: 0.7; /* マウスを乗せると少し薄くなる */
+        }
+
+        /* --- 画面全体の滑らかな動き --- */
+        html {
+            scroll-behavior: smooth; /* 瞬時に飛ばず、スルスルっと動く設定 */
         }
     </style>
 </head>
 <body>
-　　<div class="site-logo">専属執事サービス</div>
+　　<a href="#" class="site-logo">専属執事サービス</a>
     <header class="hero">
         <h1 class="hero-title"><span class="gold-text">P</span>rivate <span class="gold-text">B</span>utler</h1>
         <p class="hero-subtitle">日常に、最上の静寂と奉仕を。</p>
