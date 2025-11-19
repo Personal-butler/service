@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Butler Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 基本設定 --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a; /* 漆黒 */
+            color: #e0e0e0;
+            font-family: 'Shippori Mincho', serif; /* 明朝体 */
+            line-height: 2.0;
+            letter-spacing: 0.1em;
+        }
+
+        /* --- 共通クラス --- */
+        .gold-text {
+            color: #c5a059; /* 落ち着いたゴールド */
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* --- ヒーローセクション（トップ画像部分） --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 背景画像を設定する場合はここにURLを入れる */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #c5a059;
+            padding-bottom: 20px;
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 3s ease forwards; /* ふわっと表示 */
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 3s ease forwards 1s; /* 1秒遅れて表示 */
+        }
+
+        /* --- コンセプトセクション（縦書き） --- */
+        .concept {
+            padding: 100px 0;
+        }
+
+        .tategaki {
+            writing-mode: vertical-rl; /* 縦書き設定 */
+            font-size: 1.1rem;
+            height: 400px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 3;
+            display: inline-block;
+        }
+
+        /* --- ボタン --- */
+        .btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 40px;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c5a059;
+            color: #000;
+        }
+
+        /* --- アニメーション定義 --- */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- フッター --- */
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1 class="hero-title"><span class="gold-text">P</span>rivate <span class="gold-text">B</span>utler</h1>
+        <p class="hero-subtitle">日常に、最上の静寂と奉仕を。</p>
+    </header>
+
+    <section class="concept">
+        <div class="container">
+            <h2 class="gold-text" style="font-size: 1.5rem; margin-bottom: 60px;">Concept</h2>
+            
+            <div class="tategaki">
+                <p>貴方の影となり、支えとなること。</p>
+                <p>言葉にならぬ願いを、形にすること。</p>
+                <p>それが、我々執事の矜持でございます。</p>
+                <p>喧騒を離れた、貴方だけのサンクチュアリへ。</p>
+            </div>
+
+            <br>
+            <a href="#" class="btn">執事の手配について</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Private Butler Service. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
