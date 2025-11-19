@@ -105,10 +105,22 @@
             font-size: 0.8rem;
             border-top: 1px solid #333;
         }
+        
+        /* --- 左上のロゴ設定 --- */
+        .site-logo {
+            position: absolute; /* 場所を固定する設定 */
+            top: 25px;          /* 上からの距離 */
+            left: 30px;         /* 左からの距離 */
+            color: #e0e0e0;     /* 文字色（白に近いグレー） */
+            font-size: 1.2rem;  /* 文字の大きさ */
+            font-weight: 600;   /* 文字の太さ */
+            z-index: 100;       /* 背景より手前に表示 */
+            letter-spacing: 0.15em; /* 文字の間隔を少し広げる */
+        }
     </style>
 </head>
 <body>
-
+　　<div class="site-logo">専属執事サービス</div>
     <header class="hero">
         <h1 class="hero-title"><span class="gold-text">P</span>rivate <span class="gold-text">B</span>utler</h1>
         <p class="hero-subtitle">日常に、最上の静寂と奉仕を。</p>
